@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RGB Mixer"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/color_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/black"
+        android:layout_below="@+id/title_text_view"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/red_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red"
+        android:textSize="26sp"
+        android:textColor="@color/red"
+        android:layout_below="@+id/color_view"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <SeekBar
+        android:id="@+id/red_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/red_text_view"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progressTint="@color/red"
+        android:progressBackgroundTint="@color/red"
+        android:thumbTint="@color/red"
+        android:progress="50" />
+
+    <EditText
+        android:id="@+id/red_edit_text"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/red_text_view"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionDone"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/red"
+        android:text="0.5" />
+
+    <Switch
+        android:id="@+id/red_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/red_seek_bar"
+        android:layout_alignParentEnd="true"
+        android:text="On"
+        android:textColor="@color/red"
+        android:theme="@style/RedSwitch"
+        android:checked="true"/>
+
+    <TextView
+        android:id="@+id/green_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Green"
+        android:textSize="26sp"
+        android:textColor="@color/green"
+        android:layout_below="@+id/red_edit_text"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <SeekBar
+        android:id="@+id/green_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/green_text_view"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progressTint="@color/green"
+        android:progressBackgroundTint="@color/green"
+        android:thumbTint="@color/green"
+        android:progress="50" />
+
+    <EditText
+        android:id="@+id/green_edit_text"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/green_text_view"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionDone"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/green"
+        android:text="0.5" />
+
+    <Switch
+        android:id="@+id/green_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/green_seek_bar"
+        android:layout_alignParentEnd="true"
+        android:text="On"
+        android:textColor="@color/green"
+        android:theme="@style/GreenSwitch"
+        android:checked="true" />
+
+    <TextView
+        android:id="@+id/blue_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blue"
+        android:textSize="26sp"
+        android:textColor="@color/blue"
+        android:layout_below="@+id/green_edit_text"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <SeekBar
+        android:id="@+id/blue_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blue_text_view"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progressTint="@color/blue"
+        android:progressBackgroundTint="@color/blue"
+        android:thumbTint="@color/blue"
+        android:progress="50" />
+
+    <EditText
+        android:id="@+id/blue_edit_text"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blue_text_view"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionDone"
+        android:textColor="@color/blue"
+        android:backgroundTint="@color/blue"
+        android:text="0.5" />
+
+    <Switch
+        android:id="@+id/blue_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blue_seek_bar"
+        android:layout_alignParentEnd="true"
+        android:text="On"
+        android:textColor="@color/blue"
+        android:theme="@style/BlueSwitch"
+        android:checked="true" />
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/reset_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset" />
+
+</RelativeLayout>
